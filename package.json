@@ -2,9 +2,9 @@
   "name": "login",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/jxnu-se-2019/login/issues"
   },
-  "homepage": "https://github.com/jxnu-se-2019/login#readme"
+  "homepage": "https://github.com/jxnu-se-2019/login#readme",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "lodash": "^4.17.15",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
 }

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title>起步</title>
+	</head>
+	<body class="text-center">
+		<form class="form-signin" action="dashboard.html" th:action="#" method="post">
+			<img id="img" class="mb-4" src="../src/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<p style="color: red" th:if="${not #strings.isEmpty(msg)}" th:text="${msg}"></p>
+			<label class="sr-only">Username</label>
+			<input id="username" name="username" type="text" class="form-control" placeholder="Username" required="" autofocus="">
+			<label id="password" class="sr-only">Password</label>
+			<input name="password" type="password" class="form-control" placeholder="Password" required="">
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+		</form>
+		<script src="main.js"></script>
+	</body>
+</html>
