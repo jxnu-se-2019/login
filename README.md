@@ -6,6 +6,6 @@
 
 ## Homework
 - Deadline: 11/26/2019
-- Use [knockout.js](https://knockoutjs.com/)
+- Use [knockout.js](https://knockoutjs.com/): bind username and password, alert username, password after validation in submit
 - Remove jquery.validate.js and use [Knockout-Validation](https://github.com/Knockout-Contrib/Knockout-Validation)
 - Investigate how does MVVM work in knockout.js
