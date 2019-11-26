@@ -8,12 +8,14 @@ import 'jquery-validation';
 
 
 $('form').validate({
+	errorClass: "text-danger",
 	rules: {
 		username: {
-			email: true
+			email: true,
 		},
 		password: {
 			minlength: 6
-		}
+		},
+
 	}
 });
