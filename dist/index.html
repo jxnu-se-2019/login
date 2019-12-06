@@ -4,20 +4,22 @@
 		<title>起步</title>
 	</head>
 	<body class="text-center">
-		<form class="form-signin" th:action="#" method="post">
+		<form class="form-signin" th:action="#" method="post" data-bind="validationOptions:{insertMessages:false}">
 			<img id="img" class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 			<p style="color: red" th:if="${not #strings.isEmpty(msg)}" th:text="${msg}"></p>
 			<label class="sr-only">Username</label>
-			<input id="username" name="username" type="text" class="form-control" placeholder="Username" required="" autofocus="">
-			<label id="password" class="sr-only">Password</label>
-			<input name="password" type="password" class="form-control" placeholder="Password" required="">
+			<input id="username" name="username" data-bind="value:username,validationElement:username" type="text" class="form-control" placeholder="Username" autofocus="">
+			<span data-bind="validationMessage:username" class="text-danger"></span>
+			<label class="sr-only">Password</label>
+			<input id="password" name="password" data-bind="value:password,validationElement:password" type="password" class="form-control" placeholder="Password">
+			<span data-bind="validationMessage:password" class="text-danger"></span>
 			<div class="checkbox mb-3">
 			    <label>
 			      <input type="checkbox" value="remember-me"> Remember me
 			    </label>
 			  </div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" data-bind="click:SubmitClick">Sign in</button>
 			<p class="mt-5 mb-3 text-muted">© 2017-2019</p>
 		</form>
 		<script src="main.js"></script>
